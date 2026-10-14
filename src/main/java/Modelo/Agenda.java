@@ -17,7 +17,6 @@ public class Agenda {
 
     /**
       Guarda un nuevo contacto en la agenda.
-      Retorna true si se guardó con éxito; false si el contacto ya existía o es inválido.
      */
     public boolean guardarContacto(Contacto c) {
         if (c == null) {
