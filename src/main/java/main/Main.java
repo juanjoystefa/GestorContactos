@@ -3,7 +3,10 @@
  */
 
 package main;
-
+import Modelo.Agenda;
+import Modelo.Contacto;
+import Vista.VistaAgenda;
+import Controlador.ControladorAgenda;
 /**
  *
  * @author Usuario
@@ -11,6 +14,11 @@ package main;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
-    }
+        // Ejecución en el hilo de eventos de Swing
+        javax.swing.SwingUtilities.invokeLater(() -> {
+            Agenda modelo = new Agenda();
+            VistaAgenda vista = new VistaAgenda();
+            ControladorAgenda controlador = new ControladorAgenda(modelo, vista);
+            controlador.iniciar();
+        });
 }
