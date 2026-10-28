@@ -11,14 +11,13 @@ import Controlador.ControladorAgenda;
  *
  * @author Usuario
  */
+
 public class Main {
 
     public static void main(String[] args) {
-        // Ejecución en el hilo de eventos de Swing
         javax.swing.SwingUtilities.invokeLater(() -> {
-            Agenda modelo = new Agenda();
             VistaAgenda vista = new VistaAgenda();
-            ControladorAgenda controlador = new ControladorAgenda(modelo, vista);
-            controlador.iniciar();
+            vista.setVisible(true);
         });
+    }
 }
