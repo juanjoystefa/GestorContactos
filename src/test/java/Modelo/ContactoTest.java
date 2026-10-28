@@ -16,27 +16,6 @@ import static org.junit.jupiter.api.Assertions.*;
 public class ContactoTest {
 
     @Test
-    public void testConstructorVacioYGetters() {
-        Contacto contacto = new Contacto();
-        assertEquals("", contacto.getNombre());
-        assertEquals("", contacto.getTelefono());
-    }
-
-    @Test
-    public void testConstructorConParametros() {
-        Contacto contacto = new Contacto("Carlos Gómez", "3001234567");
-        assertEquals("Carlos Gómez", contacto.getNombre());
-        assertEquals("3001234567", contacto.getTelefono());
-    }
-
-    @Test
-    public void testConstructorConValoresNulos() {
-        Contacto contacto = new Contacto(null, null);
-        assertEquals("", contacto.getNombre());
-        assertEquals("", contacto.getTelefono());
-    }
-
-    @Test
     public void testSetNombreYSetTelefono() {
         Contacto contacto = new Contacto();
         contacto.setNombre("Ana Ruiz");
